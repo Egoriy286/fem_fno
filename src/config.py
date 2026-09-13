@@ -67,6 +67,9 @@ class Config:
     N_TRAIN = 800
     N_VAL = 100
     N_TEST = 100
+    # N_TRAIN = 50
+    # N_VAL = 10
+    # N_TEST = 10
     N_TOTAL = N_TRAIN + N_VAL + N_TEST  # 1000
     
     # Путь для сохранения данных

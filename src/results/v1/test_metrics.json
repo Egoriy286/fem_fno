@@ -1,0 +1,11 @@
+{
+  "rel_l2_normalized": 0.03012794256210327,
+  "rel_l2_physical": 0.016628243029117584,
+  "mse": 3.4097121215381776e-07,
+  "max_error": 0.004193643108010292,
+  "mean_sample_error": 0.016628241166472435,
+  "std_sample_error": 0.017121335491538048,
+  "median_sample_error": 0.010240087285637856,
+  "min_sample_error": 0.005658670328557491,
+  "max_sample_error": 0.06490417569875717
+}

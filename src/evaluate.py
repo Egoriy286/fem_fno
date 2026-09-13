@@ -61,6 +61,9 @@ class Evaluator:
         # Создание модели
         self.model = create_fno_model(self.config)
         
+        # JIT-компилируем только вычисление модели.
+        self._predict = jax.jit(self.model.apply)
+        
         # Загрузка test dataset
         print("\nЗагрузка test dataset...")
         self.test_dataset = EllipticDataset(
@@ -70,9 +73,10 @@ class Evaluator:
         )
         self.test_dataset.to_jax()
         
+        
         print(f"Test dataset: {len(self.test_dataset)} образцов")
     
-    @jax.jit
+    # @jax.jit
     def predict(self, params, input_batch):
         """
         Prediction для батча.
